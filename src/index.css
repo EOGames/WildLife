@@ -68,3 +68,17 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.aboutBG
+{
+  background-image: url(background_about.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact
+{
+  background-image: url(background_contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}

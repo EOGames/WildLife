@@ -13,12 +13,13 @@ class App extends React.Component {
     return (
       <Routes>
       
-        <Route path='/' element = {<Home />} />
-       
+        <Route path='/' element = {<Home />} />       
 
-        <Route path='/About' element ={<About />}/>
+        <Route path='/About' element ={<About />} />
+
+        <Route path='/Contact' element={<Contact/>} />
         
-    </Routes>
+      </Routes>
         );
   }
 }
@@ -37,7 +38,7 @@ function Home()
       <SideNav />
 
       
-      {AddBackground()}
+      {AddBackground("homeBG")}
     </div>
   );
 }
@@ -49,13 +50,32 @@ function About()
 
       <Header />
       <SideNav />
+
+      {AddBackground("aboutBG")}
+    </div>
+  );
+}
+
+function Contact()
+{
+  return(
+    <div className="App">
+
+    <Header />
+    <SideNav />
+
+    {AddBackground("contact")}
     </div>
   );
 }
 
 
-function AddBackground()
+function AddBackground(cl="homeBG")
 {
-  document.body.classList.add("homeBG");
+  if (document.body.classList.length >0)
+  {
+    document.body.classList = [];
+  }
+  document.body.classList.add(cl);
 }
 
