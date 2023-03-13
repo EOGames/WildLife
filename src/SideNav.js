@@ -8,7 +8,7 @@ const SideNav = function()
             <NavButton name = "Home" link="/" />
             <NavButton name = "Animals" link="" />
             <NavButton name = "About" link="/About" />
-            <NavButton name = "Contact" link="target" />
+            <NavButton name = "Contact" link="/Contact" />
         </div>
     );
 }

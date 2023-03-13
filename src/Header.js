@@ -1,10 +1,10 @@
 import React from "react";
 
-const Header = function()
+const Header = function(props)
 {
     return(
         <div className="header">
-            Its A Header
+            {props.title}
         </div>
     );
 }

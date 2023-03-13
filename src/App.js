@@ -2,6 +2,9 @@ import Header from './Header';
 import SideNav from './SideNav';
 import {Route, Routes } from 'react-router-dom';
 import React from 'react';
+import SlideInfo from './SlideInfo';
+import data from "./Database";
+
 
 
 class App extends React.Component {
@@ -28,15 +31,13 @@ export default App;
 
 
 function Home()
-{
-  
- 
+{ 
   return(
     <div className="App"  >
      
-      <Header />
+      <Header title ={data[0].title} />
       <SideNav />
-
+      <SlideInfo info = {data[0].info}/>
       
       {AddBackground("homeBG")}
     </div>
@@ -48,8 +49,9 @@ function About()
   return(
     <div className="App">
 
-      <Header />
+      <Header title ={data[1].title} />
       <SideNav />
+      <SlideInfo info = {data[1].info}/>
 
       {AddBackground("aboutBG")}
     </div>

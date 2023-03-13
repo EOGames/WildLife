@@ -18,15 +18,27 @@ code {
     monospace;
 }
 
+*
+{
+  font-family: 'Bree Serif', serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+}
+
 .header
 {
-  background-color: #ccc;
+  background-color: #48b85193;
+  color: #6ab349;
+  text-shadow:2px 2px 5px black;
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2em;
   font-weight: 900;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  box-shadow: 2px 2px 5px #6ab349;
 }
 
 .sideNav
@@ -40,6 +52,9 @@ code {
   justify-content: center;
   flex-direction: column;
   box-shadow: 4px 4px 5px #c0acc9,-4px -4px 5px #c0acc9;
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 5%;
+  border-top-right-radius: 10%;
 }
 
 .navButton
@@ -58,8 +73,11 @@ code {
   text-decoration: none;
   font-size: 2vw;
   font-weight: 900;
-  -webkit-text-stroke: 1px black;
-  color: #d5a4ec;
+  stroke: 1px black;
+
+  -webkit-text-stroke: 1px #e8d3f1,1px black;
+  color: #eac5fc;
+  text-shadow: 2px 2px 5px black;
 }
 
 .homeBG
@@ -81,4 +99,51 @@ code {
   background-image: url(background_contact.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.infoText
+{
+  display: flex;
+  color: #6ab349;
+  font-size: 1.7em;
+  margin: 0; 
+  justify-content: flex-end;
+  width: 50%;
+  position: relative;
+  left: 40vw;
+  top: -30vh;
+  stroke: 1px rgb(10, 0, 0),2px rgb(238, 204, 204);
+  -webkit-text-stroke: 1px rgb(10, 0, 0),2px rgb(238, 204, 204);
+  text-shadow: 2px #ccc;
+  box-shadow: 2px 2px 5px #648359,-2px -2px 5px #648359,4px 4px 10px black, -4px -4px 10px black;
+  border-radius: 7%;
+  padding: .29em;
+  font-weight: 900;
+  animation: AnimateInfoText 4s infinite ease-in-out;
+  animation-timing-function: linear;
+  text-align: center;
+  white-space:pre-wrap;
+}
+
+@keyframes AnimateInfoText
+{
+  0% 
+  {
+    top: -30vh;
+    border: 1px solid #d386f7;
+  }
+
+  25%
+  {
+    top: -25vh;
+  }
+
+  50%
+  {
+    border: 1px solid #f7b086;
+
+    top:-20vh;
+  }
+
+  
 }
